@@ -10,6 +10,7 @@ widgets = {
     c.TRAIN_WIN_BTN: None,
     c.LOCATIONS_TRVW: None,
     c.MODE_TRAVEL_LBL: None,
+    c.LOCATIONS_SCRLBR: None,
 }
 
 def setup_root():
@@ -45,7 +46,7 @@ def setup_widgets():
         widgets[c.FRAME],
         text=c.MODE_TRAVEL_TEXT,
     )
-    widgets[c.MODE_TRAVEL_LBL].grid(row=0, column = 1, columnspan=2, padx=100, pady=5)
+    widgets[c.MODE_TRAVEL_LBL].grid(row=0, column =1, sticky='e', padx=(100, 0), pady=5)
 
     widgets[c.TRAIN_WIN_BTN] = ttk.Button(
         widgets[c.MODE_TRAVEL_LBL],
@@ -61,6 +62,35 @@ def setup_widgets():
     )
     widgets[c.PLANE_WIN_BTN].grid(row=0, column = 1, padx = 5, pady=3, ipadx = 5, ipady = 3)
 
+    columns = ('city', 'district', 'state')
+    widgets[c.LOCATIONS_TRVW] = ttk.Treeview(
+        widgets[c.FRAME],
+        columns=columns,
+        show='headings',
+        height=18
+    )
+    widgets[c.LOCATIONS_TRVW].heading('city', text='City')
+    widgets[c.LOCATIONS_TRVW].heading('district', text='District')
+    widgets[c.LOCATIONS_TRVW].heading('state', text='State')
+
+    places = []
+    for i in range(1, 40):
+        places.append((f'city{i}', f'district{i}', f'state{i}'))
+
+    for place in places:
+        widgets[c.LOCATIONS_TRVW].insert('', tk.END, values=place)
+
+    widgets[c.LOCATIONS_TRVW].grid(row=1, column=0, columnspan=2, sticky='news', padx = (10, 0), pady=10)
+
+    widgets[c.LOCATIONS_SCRLBR] = ttk.Scrollbar(
+        widgets[c.FRAME],
+        orient=tk.VERTICAL,
+        command=widgets[c.LOCATIONS_TRVW].yview,
+    )
+    widgets[c.LOCATIONS_TRVW].configure(yscroll=widgets[c.LOCATIONS_SCRLBR].set)
+    widgets[c.LOCATIONS_SCRLBR].grid(row=1, column=2, sticky='nws')
+
+    
     
 
     

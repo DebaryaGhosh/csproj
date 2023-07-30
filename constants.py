@@ -12,8 +12,10 @@ TITLE_LBL_TEXT = 'CSPROJECT'
 TRAIN_WIN_BTN = 'train win button'
 PLANE_WIN_BTN = 'plane win button'
 LOCATIONS_TRVW = 'locations treeview'
+LOCATIONS_SCRLBR = 'locations scrollbar'
 MODE_TRAVEL_LBL = 'mode of travel label'
 MODE_TRAVEL_TEXT =  'Mode Of Travel:'
+
 
 
 #--------BUTTON STRINGS-------------------------
