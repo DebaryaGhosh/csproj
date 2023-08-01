@@ -1,23 +1,28 @@
-WINDOW_SIZE = '825x525'
+WINDOW_SIZE = '810x510'
 WINDOW_TITLE = 'CSPROJ Alpha v0.0.1'
 
 FRAME_WIDTH = 800
 FRAME_HEIGHT = 500
+
+FRAME_BRDR = 'black'
+FRAME_BRDR_THKS = 1
+
+NTBK_FRAME_WIDTH = 780
+NTBK_FRAME_HEIGHT = 400
+
+TITLE_LBL_FONT = ("Helvetica", "16", 'bold')
+
+NONE = None
 
 #--------DICTIONARY CONSTANTS----------------------
 ROOT = 'root'
 FRAME = 'frame'
 TITLE_LBL = 'title label'
 TITLE_LBL_TEXT = 'CSPROJECT'
-TRAIN_WIN_BTN = 'train win button'
-PLANE_WIN_BTN = 'plane win button'
-LOCATIONS_TRVW = 'locations treeview'
-LOCATIONS_SCRLBR = 'locations scrollbar'
-MODE_TRAVEL_LBL = 'mode of travel label'
-MODE_TRAVEL_TEXT =  'Mode Of Travel:'
-
-
+TABS_NTBK = 'tabs notebook'
+NTBK_FRAME_TRAIN = 'notebook frame train'
+NTBK_FRAME_PLANE = 'notebook frame plane'
 
 #--------BUTTON STRINGS-------------------------
-TRAIN_WIN_TEXT = 'Trains'
-PLANE_WIN_TEXT = 'Planes'
+TAB_TRAINS = 'Train'
+TAB_PLANES = 'Plane'
